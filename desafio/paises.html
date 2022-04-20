@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    <p>Onde você nasceu?</p>
+
+    <input type="text" id="txt" submit>
+    <input type="submit" id="send" value="enviar" onclick="nascionalidade()">
+    <div id="divHTML"></div>
+    <script>
+        function nascionalidade() {
+            var div = window.document.getElementById('divHTML')
+            var resposta = window.document.getElementById('txt')
+            var enviar = document.getElementById('send')
+            var valor = resposta.value
+
+            if (valor == 'brasil') {
+                div.innerHTML = 'Você é brasileiro!'
+            }
+            if (valor == 'eua' || valor == 'EUA' || valor == 'Estados Unidos' || valor == 'Estados Unidos da America') {
+                div.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
